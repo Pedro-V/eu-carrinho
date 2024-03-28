@@ -26,7 +26,6 @@ void display(void)
   }
   terrain.draw();
   car.draw();
-  /*drawAxis();*/
   drawSun(sunPos);
 
   glFlush();
@@ -101,13 +100,12 @@ void setupLighting() {
 void init(const char* filename) {
   glClearColor(0.0, 0.0, 0.0, 0.0);
 
-  terrain.init(filename);
+  terrain.init(filename/*, GL_FILL*/);
   car.init(terrain);
   mode = SimulatorMode::Simulation;
   sunPos = { 3.0, ((float)terrain.cols) + 3, 10.0 };
 
   glEnable(GL_COLOR_MATERIAL);
-  setupLighting();
 
   /*glEnable(GL_DEPTH_TEST);*/
 }

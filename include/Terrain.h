@@ -15,7 +15,7 @@ public:
 
     Terrain();
     ~Terrain();
-    void init(const char *filename, GLenum _drawMode = GL_FILL);
+    void init(const char *filename, GLenum _drawMode = GL_LINE);
     void readData(const char *filename);
     void draw();
     void drawMesh();
