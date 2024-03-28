@@ -45,11 +45,11 @@ O simulador consiste em dois modos. Alteração entre os modos é feito com a te
 
 - Simulação: controle e mova o carrinho, com a câmera seguindo. Esse é o modo inicial.
   Os comandos disponíveis são:
-  - Up: Carrinho avança uma posição
-  - Left/Right: Carrinho vira numa direção.
+  - `Up`: Carrinho avança uma posição
+  - `Left/Right`: Carrinho vira numa direção.
 - Visualização: rotacione e dê zoom na câmera, podendo visualizar melhor o terreno.
   Os comandos disponívels são:
-  - Left/Right: Rotaciona ao redor do carrinho.
-  - Up/Down: Aproxima ou distancia a câmera do carrinho.
-  - F1: Reseta o nível de zoom.
+  - `Left/Right`: Rotaciona ao redor do carrinho.
+  - `Up/Down`: Aproxima ou distancia a câmera do carrinho.
+  - `F1`: Reseta o nível de zoom.
 
