@@ -71,21 +71,8 @@ void Car::renderMesh() {
 }
 
 void Car::rotateModel() {
-  switch (dir) {
-    // Rotating 90º around x leaves the model poiting North.
-    case Direction::North:
-      glRotatef(180, 0.0, 0.0, 1.0);
-      break;
-    case Direction::East:
-      glRotatef(90, 0.0, 0.0, 1.0);
-      break;
-    case Direction::South:
-      glRotatef(0, 0.0, 0.0, 1.0);
-      break;
-    case Direction::West:
-      glRotatef(270, 0.0, 0.0, 1.0);
-      break;
-  }
+  int dist = getDistanceFrom(Direction::South, dir);
+  glRotatef(dist * 45, 0.0, 0.0, 1.0);
   glRotatef(90, 1.0, 0.0, 0.0);
 }
 
