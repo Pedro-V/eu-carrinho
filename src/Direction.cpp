@@ -32,8 +32,7 @@ std::tuple<int, int> advanceDir(int x, int y, Direction dir, int scale) {
         {Direction::NorthWest, {-1, 1}}
     };
 
-    auto inc = Increments[dir];
-    auto [x_increment, y_increment] = inc;
+    auto [x_increment, y_increment] = Increment[dir];
     return std::make_tuple(x + scale * x_increment, y + scale * y_increment);
 }
 
