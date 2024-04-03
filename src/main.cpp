@@ -87,7 +87,7 @@ void keyboard(unsigned char key, int x, int y) {
 }
 
 void setupLighting() {
-  GLfloat light0_position[] = { sunPos.x, sunPos.y, sunPos.z, 0.0 };
+  GLfloat light0_position[] = { sunPos.x, sunPos.y, sunPos.z, 1.0 };
   GLfloat light0_diffuse[] = { 1.0, 1.0, 1.0, 1.0 };
 
   glLightfv(GL_LIGHT0, GL_POSITION, light0_position);
@@ -100,11 +100,12 @@ void setupLighting() {
 void init(const char* filename) {
   glClearColor(0.0, 0.0, 0.0, 0.0);
 
-  terrain.init(filename/*, GL_FILL*/);
+  terrain.init(filename, GL_FILL);
   car.init(terrain);
   mode = SimulatorMode::Simulation;
   sunPos = { 3.0, ((float)terrain.cols) + 3, 10.0 };
 
+  setupLighting();
   glEnable(GL_COLOR_MATERIAL);
 
   /*glEnable(GL_DEPTH_TEST);*/
